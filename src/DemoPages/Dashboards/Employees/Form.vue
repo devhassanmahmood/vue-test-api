@@ -75,9 +75,7 @@
             ></v-select>
             <v-text-field
               v-model="employee.province"
-              :rules="required"
               label="Province"
-              required
             ></v-text-field>
             <v-btn
               :disabled="!valid"
@@ -93,6 +91,13 @@
               @click="reset"
               >
               Reset
+            </v-btn>
+            <v-btn
+              color="primary  "
+              class="mr-4"
+              @click="Back"
+              >
+              Back
             </v-btn>
           </v-form>
         </div>
@@ -147,6 +152,9 @@
       reset () {
         this.$refs.form.reset()
       },
+      Back () {
+        this.$router.push('/employees')
+      }
     },
   }
 </script>

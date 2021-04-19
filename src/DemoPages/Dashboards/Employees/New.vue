@@ -51,7 +51,7 @@
     },
     methods: {
       createEmployee () {
-        api.post('https://devapi.wurkzen.com/v1/employee', this.employee)
+        api.post('https://devapi.wurkzen.com/v1/client/1/employee', this.employee)
            .then(res => {
               console.log(res)
               this.text = "Employee has been created!."

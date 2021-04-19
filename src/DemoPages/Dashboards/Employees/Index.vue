@@ -65,7 +65,7 @@
       "font-awesome-icon": FontAwesomeIcon
     },
     mounted () {
-      api.get('https://devapi.wurkzen.com/v1/employees')
+      api.get('https://devapi.wurkzen.com/v1/client/1/employees')
          .then(res => {
             this.employees = res.data
          })
@@ -82,7 +82,7 @@
         this.$router.push(`/employees/edit/${item.id}`)
       },
       deleteEmployee (item) {
-        api.delete(`https://devapi.wurkzen.com/v1/employee/${item.id}`)
+        api.delete(`https://devapi.wurkzen.com/v1/client/1/employee/${item.id}`)
         .then(res => {
           this.employees = this.employees.filter(employee => employee.id != item.id)
           console.log(res)

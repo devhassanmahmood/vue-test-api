@@ -39,7 +39,7 @@
     },
     
     mounted() {
-      api.get(`https://devapi.wurkzen.com/v1/employee/${this.$route.params.id}`)
+      api.get(`https://devapi.wurkzen.com/v1/client/1/employee/${this.$route.params.id}`)
        .then(res => {
           this.employee = res.data
        })
@@ -49,7 +49,7 @@
      },
     methods: {
       editEmployee (employee) {
-        api.put(`https://devapi.wurkzen.com/v1/employee/${employee.id}`, employee)
+        api.put(`https://devapi.wurkzen.com/v1/client/1/employee/${employee.id}`, employee)
            .then( res => {
               console.log(res)
               this.text = "Employee has been updated!."
